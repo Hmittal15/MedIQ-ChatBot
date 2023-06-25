@@ -1,0 +1,10 @@
+version: '1'
+services:
+  streamlit:
+    image: mittal15/streamlit_mediq:latest
+    ports:
+      - "8000:8000"
+  flask:
+    image: mittal15/flask_mediq:latest
+    ports:
+      - "8090:8090"

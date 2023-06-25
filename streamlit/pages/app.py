@@ -38,7 +38,7 @@ def chat_interface(chat_messages):
 
     button_pressed = False
 
-    BASE_URL = "http://localhost:8080"
+    BASE_URL = "http://flask:8090"
 
     user_input = st.text_input('Query')
 
