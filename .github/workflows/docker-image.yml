@@ -1,0 +1,35 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Login Docekrhub
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      
+    - name: Build the Flask Docker image
+      run: |
+        cd flask
+        docker build -t flask_mediq .
+      
+    - name: Build the Streamlit Docker image
+      run: |
+        cd ..
+        cd streamlit
+        docker build -t streamlit_mediq .
+      
+    - name: Push to Docekrhub
+      run: |
+        docker push mittal15/flask_mediq:latest
+        docker push mittal15/streamlit_mediq:latest
