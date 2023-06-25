@@ -10,7 +10,9 @@ WORKDIR /app
 ADD pages /app/pages/
 
 ADD pages/app.py /app/pages/
-ADD home.py health_bg.jpg requirements.txt /app/
+ADD home.py /app/
+ADD health_bg.jpg /app/
+ADD requirements.txt /app/
 
 RUN pip install -r requirements.txt
 # Install the dependency
