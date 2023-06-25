@@ -25,7 +25,6 @@ jobs:
       
     - name: Build the Streamlit Docker image
       run: |
-        cd ..
         cd streamlit
         docker build -t streamlit_mediq .
       
