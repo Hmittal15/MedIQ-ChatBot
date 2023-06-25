@@ -7,6 +7,11 @@ RUN pip install --upgrade pip
 WORKDIR /app
 # Change the working dir inside the container - cd /app
 
+ADD main.py /app/
+ADD intents.json /app/
+ADD requirements.txt /app/
+ADD tokenizer.pickle /app/
+ADD label_encoder.pickle /app/
 ADD chat_model /app/chat_model/
 ADD chat_model/assets /app/chat_model/
 ADD chat_model/variables /app/chat_model/
@@ -15,12 +20,6 @@ ADD chat_model/variables/variables.index /app/chat_model/variables
 ADD chat_model/fingerprint.pb /app/chat_model/
 ADD chat_model/keras_metadata.pb /app/chat_model/
 ADD chat_model/saved_model.pb /app/chat_model/
-
-ADD main.py /app/
-ADD intents.json /app/
-ADD requirements.txt /app/
-ADD tokenizer.pickle /app/
-ADD label_encoder.pickle /app/
 
 RUN pip install -r requirements.txt
 # Install the dependency

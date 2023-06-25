@@ -7,12 +7,11 @@ RUN python -m pip install --upgrade pip
 WORKDIR /app
 # Change the working dir inside the container - cd /app
 
-ADD pages /app/pages/
-
-ADD pages/app.py /app/pages/
 ADD home.py /app/
 ADD health_bg.jpg /app/
 ADD requirements.txt /app/
+ADD pages /app/pages/
+ADD pages/app.py /app/pages/
 
 RUN pip install -r requirements.txt
 # Install the dependency
