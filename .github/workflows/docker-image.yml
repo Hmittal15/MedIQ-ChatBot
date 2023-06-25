@@ -21,14 +21,14 @@ jobs:
     - name: Build the Flask Docker image
       run: |
         cd flask
-        docker build -t flask_mediq:latest .
+        docker build -t flask_mediq .
       
     - name: Build the Streamlit Docker image
       run: |
         cd streamlit
-        docker build -t streamlit_mediq:latest .
+        docker build -t streamlit_mediq .
       
-    - name: Push to Docekrhub
+    - name: Push to Dockerhub
       run: |
-        docker push mittal15/flask_mediq:latest
-        docker push mittal15/streamlit_mediq:latest
+        docker push mittal15/flask_mediq
+        docker push mittal15/streamlit_mediq
