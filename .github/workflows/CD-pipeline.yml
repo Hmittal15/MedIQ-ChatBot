@@ -1,0 +1,21 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ['Docker Image CI']
+    types:
+      - completed
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Pull Flask Docker image
+    - run: sudo docker pull mittal15/flask_mediq:latest
+    - name: Pull Streamlit Docker image
+    - run: sudo docker pull mittal15/streamlit_mediq:latest
+    - name: Run Docker compose
+    - run: sudo docker compose up
