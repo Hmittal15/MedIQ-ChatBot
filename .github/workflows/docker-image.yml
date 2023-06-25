@@ -30,5 +30,7 @@ jobs:
       
     - name: Push to Dockerhub
       run: |
-        docker push mittal15/flask_mediq
-        docker push mittal15/streamlit_mediq
+        docker tag flask_mediq mittal15/flask_mediq:latest
+        docker push mittal15/flask_mediq:latest
+        docker tag streamlit_mediq mittal15/streamlit_mediq:latest
+        docker push mittal15/streamlit_mediq:latest
