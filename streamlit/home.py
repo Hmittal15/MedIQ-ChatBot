@@ -20,7 +20,7 @@ if __name__=="__main__":
     # Introduction and description
     st.markdown(
         """
-        Welcome to the MedIQ ChatBot Interface, a smart and intuitive platform designed to provide you with medical information and assistance in a convenient and personalized manner. MedIQ chatbot leverages advanced natural language processing and deep learning techniques to simulate a virtual doctor's appointment, addressing your medical queries and concerns.
+        Welcome to the MedIQ ChatBot interface, a smart and intuitive platform designed to provide you with medical information and assistance in a convenient and personalized manner. MedIQ chatbot leverages advanced natural language processing and deep learning techniques to simulate a virtual doctor's appointment, addressing your medical queries and concerns.
         """
     )
 
