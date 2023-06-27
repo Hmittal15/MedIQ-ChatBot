@@ -16,4 +16,76 @@ Technologies used in this project
 * Google Cloud Platform
 * GitHub CI/CD pipline
 
+## Files
+
+```
+📦 MedIQ-ChatBot
+├─ .github
+│  └─ workflows
+│     ├─ CD-pipeline.yml
+│     └─ docker-image.yml
+├─ .gitignore
+├─ README.md
+├─ docker-compose.yml
+├─ flask
+│  ├─ Dockerfile
+│  ├─ chat_model
+│  │  ├─ assets
+│  │  │  └─ .placeholder
+│  │  ├─ fingerprint.pb
+│  │  ├─ keras_metadata.pb
+│  │  ├─ saved_model.pb
+│  │  └─ variables
+│  │     ├─ variables.data-00000-of-00001
+│  │     └─ variables.index
+│  ├─ intents.json
+│  ├─ label_encoder.pickle
+│  ├─ main.py
+│  ├─ requirements.txt
+│  ├─ tokenizer.pickle
+│  └─ train.py
+└─ streamlit
+   ├─ Dockerfile
+   ├─ health_bg.jpg
+   ├─ home.py
+   ├─ pages
+   │  └─ app.py
+   └─ requirements.txt
+```
+
+## Description of Dataset
+For this task, I used the medical question answer dataset prepared by Lasse Regin Nelson. This dataset is uploaded in his GitHub https://github.com/LasseRegin/medical-question-answer-data. He has gathered such question answer pairs from prominent medical websites such as eHealth Forum, iCliniq, Question Doctors, WebMD where real doctors have provided public answers to the questions asked by patients. We are provided with about 25K question answer pairs. Along with the question answer pairs we are also given tags to efficiently categorize the questions into belonging to a particular disease, etc.
+
 ## Implementation
+1. Developed a healthcare chatbot leveraging natural language processing (NLP) techniques, enabling users to interactively seek medical advice and insights similar to a virtual doctor's appointment
+2. Enhanced performance through lemmatization, tokenization and hyperparameter tuning, attaining 79% reduction in loss
+3. Trained a deep learning LSTM RNN model on question-answer dataset for precise responses to queries/medical concerns, with 94% accuracy
+4. Designed and implemented RESTful APIs using Flask, to expose backend functionalities of the application to end-users
+5. Developed a Streamlit web application that allows users to interact with the trained model
+6. Containerized both Streamlit and Flask microservices using 2 Docker containers, allowing for easier sharing and scalability. Published the Docker images on DockerHub, making it easily accessible to others over the internet (https://hub.docker.com/r/mittal15/flask_mediq/tags, https://hub.docker.com/r/mittal15/streamlit_mediq/tags)
+7. Administered GitHub CI/CD pipeline to automatically build and deploy code, and streamline the development process
+9. Deployed the application on a Google Cloud Platform (GCP) VM instance through a docker compose file, utilizing top-tier cloud computing infrastructure to provide fast and reliable hosting
+
+## Installation
+To clone and replicate the project, please follow the steps below:
+
+1. Open the command line interface (CLI) on your computer.
+2. Navigate to the directory where you want to clone the repository.
+3. Type `git clone https://github.com/Hmittal15/MedIQ-ChatBot.git` and press Enter. This will clone the repository to your local machine.
+4. Navigate into the cloned repository using `cd your-repo`
+5. Pull the docker images from DockerHub using commands- `docker pull mittal15/flask_mediq:latest` and `docker pull mittal15/streamlit_mediq:latest`
+6. Fire up the dockers using command `docker compose up` from project root directory. Streamlit app should be running on port 8000 and Flask should be running on port 8090. Happy chatting!
+
+## Application demo:-
+![Demo](https://github.com/Hmittal15/SpaceX-Rocket-First-Stage-Landing-Prediction/assets/108916132/01afa156-70a3-4f27-94b1-264d76070ce0)
+
+## Link to full explanatory video:-
+https://youtu.be/eG1IvwuZ9e4
+
+## Application public link:
+http://34.148.161.201:8000
+
+## GitHub Continuous Integration:
+[![CI Pipeline](https://github.com/Hmittal15/MedIQ-ChatBot/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Hmittal15/MedIQ-ChatBot/actions/workflows/docker-image.yml)
+
+## You can find me on <a href="http://www.linkedin.com/in/harshit-mittal-52b292131"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" width="17" height="17" /></a>
