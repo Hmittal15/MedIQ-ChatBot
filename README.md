@@ -77,15 +77,15 @@ To clone and replicate the project, please follow the steps below:
 6. Fire up the dockers using command `docker compose up` from project root directory. Streamlit app should be running on port 8000 and Flask should be running on port 8090. Happy chatting!
 
 ## Application demo:-
-![Demo](https://github.com/Hmittal15/SpaceX-Rocket-First-Stage-Landing-Prediction/assets/108916132/01afa156-70a3-4f27-94b1-264d76070ce0)
+![Demo GIF](https://github.com/Hmittal15/MedIQ-ChatBot/assets/108916132/423d76c6-98fd-4365-8fee-a55f45fd6cd6)
 
 ## Link to full explanatory video:-
-https://youtu.be/eG1IvwuZ9e4
+https://youtu.be/hU_MGfL9Hqo
 
 ## Application public link:
 http://34.148.161.201:8000
 
-## GitHub Continuous Integration:
+## GitHub CI/CD workflow:
 [![CI Pipeline](https://github.com/Hmittal15/MedIQ-ChatBot/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Hmittal15/MedIQ-ChatBot/actions/workflows/docker-image.yml)
 
 ## You can find me on <a href="http://www.linkedin.com/in/harshit-mittal-52b292131"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" width="17" height="17" /></a>
